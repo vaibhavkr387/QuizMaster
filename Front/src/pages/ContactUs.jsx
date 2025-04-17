@@ -134,7 +134,7 @@ const ContactUs = () => {
                 Send Us a Message
               </Typography>
 
-              <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} action="https://formspree.io/f/mpwpgwkj" method="POST">
                 <TextField
                   fullWidth
                   label="Name"
