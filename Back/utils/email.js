@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
 exports.sendOTP = async (email, otp) => {
   try {
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: `"QuizMaster App" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: 'Your OTP for Quiz App',
       html: `
