@@ -4,8 +4,7 @@ import {
   IconButton, Snackbar, Alert
 } from "@mui/material";
 import {
-  Mail, Phone, LocationOn,
-  Facebook, Twitter, Instagram, LinkedIn
+  Mail, Phone, LocationOn, Twitter, Instagram, LinkedIn
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import styles from "../styles/pages/ContactUs.module.css";
@@ -49,7 +48,7 @@ const ContactUs = () => {
                   <Typography variant="subtitle1" fontWeight="bold">
                     Email
                   </Typography>
-                  <Typography>support@quizmaster.com</Typography>
+                  <Typography>vaibhavkr387@gmail.com</Typography>
                 </Box>
               </Box>
 
@@ -59,7 +58,7 @@ const ContactUs = () => {
                   <Typography variant="subtitle1" fontWeight="bold">
                     Phone
                   </Typography>
-                  <Typography>+1 (123) 456-7890</Typography>
+                  <Typography>+91................</Typography>
                 </Box>
               </Box>
 
@@ -70,8 +69,8 @@ const ContactUs = () => {
                     Address
                   </Typography>
                   <Typography>
-                    Chandigarh University, NH-95 Chandigarh-Ludhiana Highway,
-                    Punjab 140413, India
+                    Mahavir Mandir, Near Patna Junction Railway Station,
+                    Station Road, Patna, Bihar 800001, India
                   </Typography>
                 </Box>
               </Box>
@@ -79,14 +78,14 @@ const ContactUs = () => {
               {/* Map */}
               <Box className={styles.mapContainer}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3424.896123383367!2d76.57180827559357!3d30.7699755738611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ffb140bd63e07%3A0x68591e334d17a988!2sChandigarh%20University!5e0!3m2!1sen!2sin!4v1682841015977!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.849391148872!2d85.13502847519293!3d25.61444967756927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58569d485a51%3A0x3ceb873b3e1e4458!2sMahavir%20Mandir%2C%20Patna%20Junction!5e0!3m2!1sen!2sin!4v1682841015977!5m2!1sen!2sin"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="CU Map"
+                  title="Mahavir Mandir Map"
                 />
               </Box>
             </Paper>
@@ -101,32 +100,36 @@ const ContactUs = () => {
 
               <Box className={styles.socialLinks}>
                 <IconButton
-                  href="https://facebook.com"
+                  href="https://www.linkedin.com/in/vaibhav-kumar-227475289"
                   target="_blank"
                   className={styles.socialIcon}
+                  aria-label="LinkedIn"
                 >
-                  <Facebook />
+                  <LinkedIn />
                 </IconButton>
                 <IconButton
-                  href="https://twitter.com"
+                  href="https://x.com/vaibhavkr473"
                   target="_blank"
                   className={styles.socialIcon}
+                  aria-label="Twitter"
                 >
                   <Twitter />
                 </IconButton>
                 <IconButton
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/vaibhav_razz_22/"
                   target="_blank"
                   className={styles.socialIcon}
+                  aria-label="Instagram"
                 >
                   <Instagram />
                 </IconButton>
                 <IconButton
-                  href="https://linkedin.com"
+                  href="mailto:vaibhavkr387@gmail.com?subject=Query%20about%20QuizMaster&body=Hi%20Vaibhav%2C%0A%0AI%20would%20like%20to%20connect%20regarding%20QuizMaster.%0A%0ABest%20regards"
                   target="_blank"
                   className={styles.socialIcon}
+                  aria-label="Email"
                 >
-                  <LinkedIn />
+                  <Mail />
                 </IconButton>
               </Box>
 
@@ -134,7 +137,7 @@ const ContactUs = () => {
                 Send Us a Message
               </Typography>
 
-                <form onSubmit={handleSubmit} action="https://formspree.io/f/mpwpgwkj" method="POST">
+              <form onSubmit={handleSubmit} action="https://formspree.io/f/mpwpgwkj" method="POST">
                 <TextField
                   fullWidth
                   label="Name"
