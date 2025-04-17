@@ -74,9 +74,9 @@ const Home = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        // First, get current weather
+        // Updated location to Patna, India
         const currentResponse = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=Chandigarh,IN&units=metric&appid=${import.meta.env.VITE_WEATHER_API_KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?q=Patna,IN&units=metric&appid=${import.meta.env.VITE_WEATHER_API_KEY}`
         );
         
         if (!currentResponse.ok) {
