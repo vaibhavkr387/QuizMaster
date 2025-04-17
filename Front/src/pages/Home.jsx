@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import {  Container,  Typography,  Button,  Grid,  Paper, Box, TextField, Card, CardContent, IconButton, Avatar, CircularProgress, useTheme, Stack } from "@mui/material";
-import {  Quiz, AutoAwesome, Timeline, Psychology, Mail, GitHub, LinkedIn, Code, CalendarMonth, WbSunny, Cloud, WaterDrop, Air, LocationOn, Visibility, Chat } from "@mui/icons-material";
+import {  Quiz, AutoAwesome, Timeline, Psychology, Mail, GitHub, LinkedIn, Code, CalendarMonth, WbSunny, Cloud, WaterDrop, Air, LocationOn, Visibility, Chat, Engineering, Computer } from "@mui/icons-material";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -16,9 +16,9 @@ const developers = [
     role: "Frontend Developer",
     description: "Frontend specialist with expertise in React, Material-UI, and modern JavaScript. Creating responsive and interactive user interfaces with a focus on user experience.",
     github: "https://github.com/vaibhavkr473",
-    linkedin: "https://linkedin.com/in/vaibhav-kumar",
-    portfolio: "https://vaibhavkumar.dev",
-    avatar: "/path-to-vaibhav-image.jpg"
+    linkedin: "https://linkedin.com/in/vaibhav-kumar-227475289",
+    portfolio: "https://vaibhavkr473.github.io/portfolio/",
+    icon: <Engineering sx={{ fontSize: 40, color: 'primary.main' }} />
   },
   {
     name: "Prince Singh",
@@ -27,7 +27,7 @@ const developers = [
     github: "https://github.com/princesingh",
     linkedin: "https://linkedin.com/in/prince-singh",
     portfolio: "https://princesingh.dev",
-    avatar: "/path-to-prince-image.jpg"
+    icon: <Computer sx={{ fontSize: 40, color: 'primary.main' }} />
   }
 ];
 
@@ -426,11 +426,9 @@ const Home = () => {
                       >
                         <Box className={styles.developerInfo}>
                           <Box className={styles.headerRow}>
-                            <Avatar
-                              src={dev.avatar}
-                              alt={dev.name}
-                              className={styles.developerAvatar}
-                            />
+                            <Avatar className={styles.developerAvatar}>
+                              {dev.icon}
+                            </Avatar>
                             <Box className={styles.nameSection}>
                               <Typography 
                                 variant="h6" 
@@ -516,7 +514,7 @@ const Home = () => {
               Contact Us
             </Typography>
             <Paper elevation={3} className={styles.contactForm}>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} action="https://formspree.io/f/mpwpgwkj" method="POST">
                 <Typography 
                   variant="h4" 
                   className={styles.contactTitle}
