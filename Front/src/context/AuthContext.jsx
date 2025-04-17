@@ -85,7 +85,6 @@ export const AuthProvider = ({ children }) => {
   const sendOtp = async (email, isRegistration = false) => {
     try {
       const response = await api.post("/auth/send-otp", { email, isRegistration });
-      console.log('OTP send response:', response.data);
       return { success: true, data: response.data };
     } catch (error) {
       console.error("OTP send error:", error.response?.data || error.message);
@@ -98,12 +97,9 @@ export const AuthProvider = ({ children }) => {
 
   const verifyOtp = async (email, otp) => {
     try {
-      console.log("Sending OTP verification request:", { email, otp }); // Debugging log
       const response = await api.post("/auth/verify-otp", { email, otp });
-      console.log('OTP verification response:', response.data);
       return { success: true, data: response.data };
     } catch (error) {
-      console.error("OTP verify error:", error.response?.data || error.message);
       return {
         success: false,
         error: error.response?.data?.error || "OTP verification failed",
