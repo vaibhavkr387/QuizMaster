@@ -74,13 +74,19 @@ const Home = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        // Updated location to Patna, India
+        // Verify API key is available
+        if (!import.meta.env.VITE_WEATHER_API_KEY) {
+          throw new Error('Weather API key is missing');
+        }
+
+        // First fetch for current weather
         const currentResponse = await fetch(
           `https://api.openweathermap.org/data/2.5/weather?q=Patna,IN&units=metric&appid=${import.meta.env.VITE_WEATHER_API_KEY}`
         );
         
         if (!currentResponse.ok) {
-          throw new Error('Weather API authentication failed');
+          const errorData = await currentResponse.json();
+          throw new Error(errorData.message || 'Weather API authentication failed');
         }
         
         const currentData = await currentResponse.json();
@@ -91,7 +97,8 @@ const Home = () => {
         );
         
         if (!forecastResponse.ok) {
-          throw new Error('Forecast API authentication failed');
+          const errorData = await forecastResponse.json();
+          throw new Error(errorData.message || 'Forecast API authentication failed');
         }
         
         const forecastData = await forecastResponse.json();
