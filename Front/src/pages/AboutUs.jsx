@@ -5,22 +5,24 @@ import { motion } from "framer-motion";
 import styles from "../styles/pages/AboutUs.module.css";
 
 const AboutUs = () => {
-  const developers = [
+    const developers = [
     {
       name: "Vaibhav Kumar",
-      role: "Full-stack Developer",
-      description: "Full-stack developer with expertise in MERN Stack. Passionate about creating innovative solutions.",
-      github: "https://github.com/yourusername1",
-      linkedin: "https://linkedin.com/in/yourusername1",
-      portfolio: "https://yourportfolio1.com"
+      role: "Frontend Developer",
+      description: "Frontend specialist with expertise in React, Material-UI, and modern JavaScript. Creating responsive and interactive user interfaces with a focus on user experience.",
+      github: "https://github.com/vaibhavkr473",
+      linkedin: "https://linkedin.com/in/vaibhav-kumar-227475289",
+      portfolio: "https://vaibhavkr473.github.io/portfolio/",
+      icon: <Engineering sx={{ fontSize: 40, color: 'primary.main' }} />
     },
     {
       name: "Prince Singh",
       role: "Backend Developer",
-      description: "Backend specialist with focus on system architecture and database optimization. Expert in Node.js and MongoDB.",
-      github: "https://github.com/yourusername2",
-      linkedin: "https://linkedin.com/in/yourusername2",
-      portfolio: "https://yourportfolio2.com"
+      description: "Backend expert specializing in Node.js, MongoDB, and API development. Building robust and scalable server-side solutions with focus on performance & database.",
+      linkedin: "linkedin.com/in/prince-singh-dogra-7b7b671b4",
+      github: "https://github.com/PrinceSinghDogra",
+      portfolio: "https://github.com/PrinceSinghDogra",
+      icon: <Computer sx={{ fontSize: 40, color: 'primary.main' }} />
     }
   ];
 
