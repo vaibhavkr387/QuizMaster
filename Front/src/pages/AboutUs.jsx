@@ -13,7 +13,7 @@ const AboutUs = () => {
       github: "https://github.com/vaibhavkr473",
       linkedin: "https://linkedin.com/in/vaibhav-kumar-227475289",
       portfolio: "https://vaibhavkr473.github.io/portfolio/",
-      icon: <Engineering sx={{ fontSize: 40, color: 'primary.main' }} />
+      // icon: <Engineering sx={{ fontSize: 40, color: 'primary.main' }} />
     },
     {
       name: "Prince Singh",
@@ -22,7 +22,7 @@ const AboutUs = () => {
       linkedin: "linkedin.com/in/prince-singh-dogra-7b7b671b4",
       github: "https://github.com/PrinceSinghDogra",
       portfolio: "https://github.com/PrinceSinghDogra",
-      icon: <Computer sx={{ fontSize: 40, color: 'primary.main' }} />
+      // icon: <Computer sx={{ fontSize: 40, color: 'primary.main' }} />
     }
   ];
 
