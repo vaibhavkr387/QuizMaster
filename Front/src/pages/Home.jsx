@@ -24,7 +24,7 @@ const developers = [
     role: "Backend Developer",
     description: "Backend expert specializing in Node.js, MongoDB, and API development. Building robust and scalable server-side solutions with focus on performance & database.",
     linkedin: "https://linkedin.com/in/prince-singh",
-    portfolio: "https://princesingh.dev",
+    portfolio: "https://www.linkedin.com/in/prince-singh-dogra-7b7b671b4",
     icon: <Computer sx={{ fontSize: 40, color: 'primary.main' }} />
   }
 ];
@@ -427,10 +427,6 @@ const Home = () => {
                   <IconButton component="a" href={dev.linkedin} target="_blank" className={styles.socialIcon} sx={{
                     color: theme.palette.mode==='dark' ? theme.palette.primary.light : theme.palette.primary.main }}>
                     <LinkedIn />
-                  </IconButton>
-                  <IconButton component="a" href={dev.portfolio} target="_blank" className={styles.socialIcon} sx={{
-                    color: theme.palette.mode==='dark' ? theme.palette.primary.light : theme.palette.primary.main }}>
-                    <Code />
                   </IconButton>
                 </Box>
               </Paper>
