@@ -389,114 +389,58 @@ const Home = () => {
         </Container>
 
         {/* About Us Section */}
-        <Box 
-          className={styles.aboutSection}
-          sx={{
-            background: theme.palette.mode === 'dark' 
-              ? 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)'
-              : 'linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%)',
-          }}
-        >
-          <Container maxWidth="lg">
-            <motion.div variants={itemVariants}>
-              <Typography 
-                variant="h3" 
-                align="center" 
-                gutterBottom 
-                className={styles.sectionTitle}
-                sx={{ color: theme.palette.text.primary }}
-              >
-                About Us
-              </Typography>
-              
-              <Grid container spacing={4} justifyContent="center">
-                {developers.map((dev, index) => (
-                  <Grid item xs={12} md={6} key={index}>
-                    <motion.div
-                      variants={{
-                        hidden: { opacity: 0, y: 20 },
-                        visible: { opacity: 1, y: 0 }
-                      }}
-                      transition={{ duration: 0.5, delay: index * 0.2 }}
-                    >
-                      <Paper 
-                        elevation={3} 
-                        className={styles.developerCard}
-                        sx={{
-                          backgroundColor: theme.palette.mode === 'dark' 
-                            ? 'rgba(45, 45, 45, 0.9)'
-                            : 'rgba(255, 255, 255, 0.9)',
-                          color: theme.palette.text.primary
-                        }}
-                      >
-                        <Box className={styles.developerInfo}>
-                          <Box className={styles.headerRow}>
-                            <Avatar className={styles.developerAvatar}>
-                              {dev.icon}
-                            </Avatar>
-                            <Box className={styles.nameSection}>
-                              <Typography 
-                                variant="h6" 
-                                className={styles.developerName}
-                                sx={{ 
-                                  color: theme.palette.mode === 'dark' 
-                                    ? theme.palette.primary.light 
-                                    : theme.palette.primary.dark
-                                }}
-                              >
-                                {dev.name}
-                              </Typography>
-                              <Typography 
-                                variant="subtitle1" 
-                                sx={{ color: theme.palette.primary.main }}
-                                className={styles.developerRole}
-                              >
-                                {dev.role}
-                              </Typography>
-                            </Box>
-                          </Box>
-                          <Typography 
-                            className={styles.developerBio}
-                            sx={{ color: theme.palette.text.secondary }}
-                          >
-                            {dev.description}
-                          </Typography>
-                            <IconButton 
-                              component="a" 
-                              href={dev.linkedin} 
-                              target="_blank"
-                              className={styles.socialIcon}
-                              sx={{ 
-                                color: theme.palette.mode === 'dark' 
-                                  ? theme.palette.primary.light 
-                                  : theme.palette.primary.main 
-                              }}
-                            >
-                              <LinkedIn />
-                            </IconButton>
-                            <IconButton 
-                              component="a" 
-                              href={dev.portfolio} 
-                              target="_blank"
-                              className={styles.socialIcon}
-                              sx={{ 
-                                color: theme.palette.mode === 'dark' 
-                                  ? theme.palette.primary.light 
-                                  : theme.palette.primary.main 
-                              }}
-                            >
-                              <Code />
-                            </IconButton>
-                          </Box>
-                        </Box>
-                      </Paper>
-                    </motion.div>
-                  </Grid>
-                ))}
-              </Grid>
+        <Box className={styles.aboutSection} sx={{ background: theme.palette.mode==='dark'
+    ? 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)' : 'linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%)' , }}>
+    <Container maxWidth="lg">
+      <motion.div variants={itemVariants}>
+        <Typography variant="h3" align="center" gutterBottom className={styles.sectionTitle} sx={{ color:
+          theme.palette.text.primary }}>
+          About Us
+        </Typography>
+
+        <Grid container spacing={4} justifyContent="center">
+          {developers.map((dev, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} transition={{
+              duration: 0.5, delay: index * 0.2 }}>
+              <Paper elevation={3} className={styles.developerCard} sx={{ backgroundColor: theme.palette.mode==='dark'
+                ? 'rgba(45, 45, 45, 0.9)' : 'rgba(255, 255, 255, 0.9)' , color: theme.palette.text.primary }}>
+                <Box className={styles.developerInfo}>
+                  <Box className={styles.headerRow}>
+                    <Avatar className={styles.developerAvatar}>
+                      {dev.icon}
+                    </Avatar>
+                    <Box className={styles.nameSection}>
+                      <Typography variant="h6" className={styles.developerName} sx={{ color: theme.palette.mode==='dark'
+                        ? theme.palette.primary.light : theme.palette.primary.dark }}>
+                        {dev.name}
+                      </Typography>
+                      <Typography variant="subtitle1" sx={{ color: theme.palette.primary.main }}
+                        className={styles.developerRole}>
+                        {dev.role}
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Typography className={styles.developerBio} sx={{ color: theme.palette.text.secondary }}>
+                    {dev.description}
+                  </Typography>
+                  <IconButton component="a" href={dev.linkedin} target="_blank" className={styles.socialIcon} sx={{
+                    color: theme.palette.mode==='dark' ? theme.palette.primary.light : theme.palette.primary.main }}>
+                    <LinkedIn />
+                  </IconButton>
+                  <IconButton component="a" href={dev.portfolio} target="_blank" className={styles.socialIcon} sx={{
+                    color: theme.palette.mode==='dark' ? theme.palette.primary.light : theme.palette.primary.main }}>
+                    <Code />
+                  </IconButton>
+                </Box>
+              </Paper>
             </motion.div>
-          </Container>
-        </Box>
+          </Grid>
+          ))}
+        </Grid>
+      </motion.div>
+    </Container>
+  </Box>
 
         {/* Contact Section */}
         <Container maxWidth="md" className={styles.section}>
