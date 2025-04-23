@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import {
-  Container, Typography, TextField, Button, Paper, Grid, Box,
-  IconButton, Snackbar, Alert
-} from "@mui/material";
+import { Container, Typography, TextField, Button, Paper, Grid, Box, Alert,
+  IconButton, Snackbar } from "@mui/material";
 import {
   Mail, Phone, LocationOn, Twitter, Instagram, LinkedIn
 } from "@mui/icons-material";
@@ -17,10 +15,9 @@ const ContactUs = () => {
   });
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setOpenSnackbar(true);
-    // Handle form submission logic here
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+    setOpenSnackbar(true); // Show success message
   };
 
   return (
@@ -137,33 +134,36 @@ const ContactUs = () => {
                 Send Us a Message
               </Typography>
 
-              <form onSubmit={handleSubmit} action="https://formspree.io/f/mpwpgwkj" method="POST">
+              <form action="https://formspree.io/f/mpwpgwkj" method="POST">
                 <TextField
                   fullWidth
                   label="Name"
+                  name="name"
                   margin="normal"
                   required
                   value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 />
                 <TextField
                   fullWidth
                   label="Email"
+                  name="email"
                   margin="normal"
                   type="email"
                   required
                   value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
                 <TextField
                   fullWidth
                   label="Message"
+                  name="message"
                   margin="normal"
                   multiline
                   rows={4}
                   required
                   value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 />
                 <Button
                   type="submit"
