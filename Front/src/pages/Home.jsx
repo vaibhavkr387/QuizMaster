@@ -15,7 +15,6 @@ const developers = [
     name: "Vaibhav Kumar",
     role: "Frontend Developer",
     description: "Frontend specialist with expertise in React, Material-UI, and modern JavaScript. Creating responsive and interactive user interfaces with a focus on user experience.",
-    github: "https://github.com/vaibhavkr473",
     linkedin: "https://linkedin.com/in/vaibhav-kumar-227475289",
     portfolio: "https://vaibhavkr473.github.io/portfolio/",
     icon: <Engineering sx={{ fontSize: 40, color: 'primary.main' }} />
@@ -24,7 +23,6 @@ const developers = [
     name: "Prince Singh",
     role: "Backend Developer",
     description: "Backend expert specializing in Node.js, MongoDB, and API development. Building robust and scalable server-side solutions with focus on performance & database.",
-    github: "https://github.com/princesingh",
     linkedin: "https://linkedin.com/in/prince-singh",
     portfolio: "https://princesingh.dev",
     icon: <Computer sx={{ fontSize: 40, color: 'primary.main' }} />
@@ -463,20 +461,6 @@ const Home = () => {
                           >
                             {dev.description}
                           </Typography>
-                          <Box className={styles.socialLinks}>
-                            <IconButton 
-                              component="a" 
-                              href={dev.github} 
-                              target="_blank"
-                              className={styles.socialIcon}
-                              sx={{ 
-                                color: theme.palette.mode === 'dark' 
-                                  ? theme.palette.primary.light 
-                                  : theme.palette.primary.main 
-                              }}
-                            >
-                              <GitHub />
-                            </IconButton>
                             <IconButton 
                               component="a" 
                               href={dev.linkedin} 
