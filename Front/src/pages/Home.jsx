@@ -23,8 +23,8 @@ const developers = [
     name: "Prince Singh",
     role: "Backend Developer",
     description: "Backend expert specializing in Node.js, MongoDB, and API development. Building robust and scalable server-side solutions with focus on performance & database.",
-    linkedin: "https://linkedin.com/in/prince-singh",
-    portfolio: "https://www.linkedin.com/in/prince-singh-dogra-7b7b671b4",
+    linkedin: "linkedin.com/in/prince-singh-dogra-7b7b671b4",
+    portfolio: "https://github.com/PrinceSinghDogra",
     icon: <Computer sx={{ fontSize: 40, color: 'primary.main' }} />
   }
 ];
