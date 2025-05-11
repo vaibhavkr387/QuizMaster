@@ -5,7 +5,6 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import ErrorContext from "../context/ErrorContext";
-import ForgotPassword from "./pages/ForgotPassword";
 import styles from "../styles/pages/AuthPage.module.css";
 import { Visibility, VisibilityOff, Email, LockOpen, Google, GitHub } from "@mui/icons-material";
 import IconButton from "@mui/material/IconButton";
