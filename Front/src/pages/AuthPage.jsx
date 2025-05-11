@@ -348,17 +348,6 @@ const AuthPage = () => {
               </>
             )}
           </Typography>
-          <Box sx={{ mt: 3, textAlign: 'center' }}>
-            <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
-              Or continue with
-            </Typography>
-            <SocialAuthButton startIcon={<Google />}>
-              Continue with Google
-            </SocialAuthButton>
-            <SocialAuthButton startIcon={<GitHub />}>
-              Continue with GitHub
-            </SocialAuthButton>
-          </Box>
         </Box>
       </Paper>
 
