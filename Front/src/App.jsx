@@ -23,6 +23,7 @@ import Payment from './pages/Payment';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import AuthPage from './pages/AuthPage';
+import ForgotPassword from './pages/ForgotPassword';
 import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
@@ -63,6 +64,7 @@ const App = () => {
                   {/* Public Routes */}
                   <Route path="/" element={<Home />} />
                   <Route path="/auth" element={<AuthPage />} />
+                  <Route path="/forgot-password" element={ForgotPassword} />
                   <Route path="/about-us" element={<AboutUs />} />
                   <Route path="/contact-us" element={<ContactUs />} />
 
